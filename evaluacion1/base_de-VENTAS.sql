@@ -45,21 +45,21 @@ CREATE TABLE `ventas` (
 --
 
 INSERT INTO `ventas` (`id`, `nombre`, `empresa` , `telefono` ,`serie` ,`fecha_creacion` ,`ventas`) 
-(1, 'Nico Vidal Rendón', 'NicoVidal@peluche.cs.mx', '6078133121', 1245632,'2006-07-14', 1),
-(2, 'Elías Orfeo Castro', 'EliasCastro@peluche.cs.mx', '5393578322', 1245632,'2006-03-24', 1),
-(3, 'Cruz Anastasia Guerrero', 'CruzGuerrero@peluche.csmx', '7812004946', 1245632,'2006-05-22', 0),
-(4, 'María Dolores Valdez', 'MariaValdez@peluche.csmx', '5796639079', 1245632,'2006-11-04', 0),
-(5, 'Irene Martita Gonzalo', 'IreneGonzalo@peluche.cs.mx', '6834057409', 1245632,'2006-05-11', 0),
-(6, 'Faustina Reyna Menéndez', 'FaustinaMenéndez@peluche.cs.mx', '5918686277', 1245632,'2006-09-07', 0),
-(7, 'Yésica Mercedes Mendoza', 'YésicaMendoza@peluche.cs.mx', '6771570427', 1245632,'2006-02-24', 0),
-(8, 'Aarón Xavier Félix', 'AarónFélix@peluche.cs.mx', '6263886388', 1245632,'2006-04-05', 1),
-(9, 'Matías Lisandro Zambrano', 'MatíasZambrano@peluche.cs.mx', '6234911590', 1245632,'2006-12-17', 1),
-(10, 'Benjamín César Gonzalo', 'BenjamínGonzalo@peluche.cs.mx', '5721523378',123457654, '2002-08-20', 1);
-(11, 'Perez', 'gfjhsdiufhiuds@gmail.com', '5721523378',2356856, '2002-07-11', 1);
-(12, 'Pablo', 'pepitogamer@gmail.com', '5721523378',4156388709, '2008-08-01', 1);
+(1, 'Nico Vidal Rendón', 'NicoVidal@peluche.cs.mx', '6078133121', '1245632','2006-07-14', 1),
+(2, 'Elías Orfeo Castro', 'EliasCastro@peluche.cs.mx', '5393578322', '1245632','2006-03-24', 1),
+(3, 'Cruz Anastasia Guerrero', 'CruzGuerrero@peluche.csmx', '7812004946', '1245632','2006-05-22', 0),
+(4, 'María Dolores Valdez', 'MariaValdez@peluche.csmx', '5796639079', '1245632','2006-11-04', 0),
+(5, 'Irene Martita Gonzalo', 'IreneGonzalo@peluche.cs.mx', '6834057409', '1245632','2006-05-11', 0),
+(6, 'Faustina Reyna Menéndez', 'FaustinaMenéndez@peluche.cs.mx', '5918686277', '1245632','2006-09-07', 0),
+(7, 'Yésica Mercedes Mendoza', 'YésicaMendoza@peluche.cs.mx', '6771570427', '1245632','2006-02-24', 0),
+(8, 'Aarón Xavier Félix', 'AarónFélix@peluche.cs.mx', '6263886388', '1245632','2006-04-05', 1),
+(9, 'Matías Lisandro Zambrano', 'MatíasZambrano@peluche.cs.mx', '6234911590', '1245632','2006-12-17', 1),
+(10, 'Benjamín César Gonzalo', 'BenjamínGonzalo@peluche.cs.mx', '5721523378','123457654', '2002-08-20', 1);
+(11, 'Perez', 'gfjhsdiufhiuds@gmail.com', '5721523378','2356856', '2002-07-11', 1);
+(12, 'Pablo', 'pepitogamer@gmail.com', '5721523378','4156388709', '2008-08-01', 1);
 (13, 'Castro alan', 'mauro@peluche.cs.mx', '5721523378', '2001-01-21', 1);
-(14, 'Marcela costeña', 'Benjcalero@peluche.cs.mx', '5721523378', 1245632,'2006-05-08', 1);
-(15, 'pablo alonzo', 'Benja@peluche.cs.mx', '5721523378', 1245632,'2006-06-01', 1);
+(14, 'Marcela costeña', 'Benjcalero@peluche.cs.mx', '5721523378', '1245632','2006-05-08', 1);
+(15, 'pablo alonzo', 'Benja@peluche.cs.mx', '5721523378', '1245632','2006-06-01', 1);
 
 
 --
