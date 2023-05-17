@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-05-2023 a las 05:00:07
--- Versión del servidor: 10.1.39-MariaDB
--- Versión de PHP: 7.3.5
+-- Tiempo de generación: 17-05-2023 a las 03:02:57
+-- Versión del servidor: 10.4.25-MariaDB
+-- Versión de PHP: 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -30,10 +29,21 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `artistas` (
   `id` int(11) NOT NULL,
-  `nombre` varchar(11) COLLATE utf8_bin NOT NULL,
+  `nombre` varchar(50) COLLATE utf8_bin NOT NULL,
   `edad` varchar(11) COLLATE utf8_bin NOT NULL,
-  `pelicula_id` int(11) NOT NULL
+  `genero` varchar(100) COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Volcado de datos para la tabla `artistas`
+--
+
+INSERT INTO `artistas` (`id`, `nombre`, `edad`, `genero`) VALUES
+(1, 'leo dicaprio', '48', 'hombre'),
+(2, 'Kaiden Tyler', '24', 'hombre'),
+(3, 'Jayson May', '26', 'hombre'),
+(4, 'Matias Kelly', '30', 'hombre'),
+(5, 'Victoria Lamas', '23', 'mujer');
 
 -- --------------------------------------------------------
 
@@ -54,7 +64,10 @@ CREATE TABLE `directores` (
 
 INSERT INTO `directores` (`id`, `nombre`, `peliculas`, `experiencia`) VALUES
 (1, 'leo pascal', '3', '30'),
-(2, 'georno ', '4', '50');
+(2, 'georno ', '4', '50'),
+(3, 'absabs', '5', '1'),
+(4, 'pol cabrioto', '30', '1 '),
+(5, 'Baldomero Julian\r\n\r\n', '0', '0');
 
 -- --------------------------------------------------------
 
@@ -73,7 +86,10 @@ CREATE TABLE `genero` (
 
 INSERT INTO `genero` (`id`, `nombre`) VALUES
 (1, 'horror'),
-(2, 'familiar');
+(2, 'familiar'),
+(3, 'comedia'),
+(4, 'romantica'),
+(5, 'ACCION');
 
 -- --------------------------------------------------------
 
@@ -92,6 +108,17 @@ CREATE TABLE `peliculas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
+-- Volcado de datos para la tabla `peliculas`
+--
+
+INSERT INTO `peliculas` (`id`, `genero_id`, `nombre`, `fecha`, `duracion`, `artistas_id`, `director_id`) VALUES
+(2, 1, 'pollompiro', '2018-05-15', '01:30:52', 2, 2),
+(3, 2, 'pollompiro el regreso', '2016-05-10', '02:21:54', 1, 1),
+(4, 3, 'POLLO LOCO', '2015-04-26', '01:03:22', 4, 3),
+(5, 4, 'EL AMOR DE DOS MUNDOS', '2013-05-16', '02:27:16', 5, 2),
+(6, 5, 'RESPLANDOR', '2022-08-25', '05:03:07', 4, 5);
+
+--
 -- Índices para tablas volcadas
 --
 
@@ -99,8 +126,7 @@ CREATE TABLE `peliculas` (
 -- Indices de la tabla `artistas`
 --
 ALTER TABLE `artistas`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `pelicula_id` (`pelicula_id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `directores`
@@ -131,25 +157,25 @@ ALTER TABLE `peliculas`
 -- AUTO_INCREMENT de la tabla `artistas`
 --
 ALTER TABLE `artistas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `directores`
 --
 ALTER TABLE `directores`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `genero`
 --
 ALTER TABLE `genero`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `peliculas`
 --
 ALTER TABLE `peliculas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Restricciones para tablas volcadas
