@@ -28,16 +28,18 @@
     echo"<br><br>";
 
     if($edad>= 18){
-        echo " es mayor de edad ";
+        echo " es MAYOR de edad ";
     }else{
-        echo " es menor de edad ";
+        echo " es MENOR de edad ";
     }
     echo"<br><br>";
     
     if($escuela == "CETIS 107"){
-        echo " es mayor de edad ";
-    }else{
-        echo " es menor de edad ";
+        echo " <div style =' background-color:blue;'> CETIS 107 </div> ";
+    }else if ($escuela == "CETIS 546"){
+        echo " <div style =' background-color:red;'> CETIS 546 </div> ";
+    }else if ($escuela == "COBAES"){
+        echo " <div style =' background-color:green;'> COBAES </div> ";
     }
     echo"<br><br>";
   
