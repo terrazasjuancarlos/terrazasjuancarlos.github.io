@@ -14,7 +14,7 @@
 
 
 
-
+    echo"<h2> =alumno:" .$nombre. " </h2>";
 
 
 
@@ -29,11 +29,11 @@
 
     if($pregunta1 == "b"){
        $calificasiones ++;
-        echo"<img src= d.png>";
+       echo"<img src='d.png' width='10%'> <hr>";
     }else{
         $calificasiones --;
 
-        echo"<img src= truco.png>";
+        echo"<img src='truco.png' width='10%'> <hr>";
     }
     echo"<br><br>";
 
