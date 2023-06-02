@@ -9,24 +9,35 @@
 
     $pregunta=$_POST["pregunta1"];
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
     echo"<br><br>";
     
     echo" <h2> pregunta 1, respuesta seleccionadad:  (" .$pregunta1.") </h3>";
 
     if($pregunta1 == "b"){
        $calificasiones ++;
-        echo "<img src="dulces.png">";
+        echo"<img src= d.png>";
     }else{
         $calificasiones --;
 
-        echo $nombre . " es menor que ";
+        echo"<img src= truco.png>";
     }
     echo"<br><br>";
 
-    for($i=0; $i<=10; $i++ ){
-        echo $i . "<br>";
-    } 
-
+    
 
 
 
