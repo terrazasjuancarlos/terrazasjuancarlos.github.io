@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type=text]{
+            width: 100%;
+            padding: 12px 20px;
+            box-sizing: border-box ;
+            font-size: 30px;
+            border: 0px;
+        }
+        table,th,td{
+            border: 1px solid black;
+            border-collapse: collapse;
+
+        }
+        table{
+            border-top: 0px;
+        }
+    </style>
+</head>
+<body style="width: 20%";>
+
+    <h1>Tic Tac Toe </h1>
+
+    <form action="Practica5.php" method="POST">
+
+        <table>
+
+            <tr>
+                <td><input type="text" name="cuadro[1]" value="X" required></td>
+                <td><input type="text" name="cuadro[2]" value="O" required></td>
+                <td><input type="text" name="cuadro[3]" value="X" required></td>
+            </tr>
+
+            <tr>
+                <td><input type="text" name="cuadro[4]" value="O" required></td>
+                <td><input type="text" name="cuadro[5]" value="O" required></td>
+                <td><input type="text" name="cuadro[6]" value="O" required></td>
+            </tr>
+
+            <tr>
+                <td><input type="text" name="cuadro[7]" value="O" required></td>
+                <td><input type="text" name="cuadro[8]" value="X" required></td>
+                <td><input type="text" name="cuadro[9]" value="O" required></td>
+            </tr>
+
+        </table>
+            <input type="submit" value="Revisar">
+    </form>
+
+</body>
+</html>
