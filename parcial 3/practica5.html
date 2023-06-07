@@ -5,33 +5,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TIC TAC TOE</title>
+    <title>tres en ralla</title>
     <style>
         input[type=text]{
             width: 100%;
             padding:25px;
             box-sizing: border-box ;
             font-size: 30px;
-            border: 0px;
+            border: 10px;
         }
         table,th,td{
-            border: 1px solid black;
+            border: 10px solid rgb(197, 34, 34);
             border-collapse: collapse;
-
         }
         table{
-            border-top: 0px;
+            border-top: 10px;
+        }
+        .winning-row td {
+            background-color: yellow;
         }
     </style>
 </head>
 <body style="width: 20%";>
 
-    <h1>TIC TAC TOE </h1>
-
+    <h1>tres en ralla </h1>
+    
     <hr>
+    <div>
+        <input type="text"  class="form-control" placeholder="escribe tu nombre jugador 1" required>
+    </div>
+    <div>
+        <input type="text"  class="form-control" placeholder="escribe tu nombre jugador 2" required>
+    </div>
 
     <form action="Practica5.php" method="POST">
-
+        
         <table>
 
             <tr>

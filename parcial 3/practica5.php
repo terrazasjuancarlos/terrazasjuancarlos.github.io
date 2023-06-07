@@ -4,6 +4,19 @@ $cuadros = $_POST["cuadro"];
 
 $RedFlag = 0;
 
+echo "<h1>Resultado Final</h1><h1>";
+
+//Imprimir resultado
+for($i=0;$i<9;$i++){
+    echo "[$cuadros[$i]]";
+
+    if($i==2 || $i==5){
+        echo "<br>";
+    }
+}
+echo "</h1>";
+echo "[$cuadros"
+echo "</h1>";
 //var_dump($cuadros);
 
 /*
