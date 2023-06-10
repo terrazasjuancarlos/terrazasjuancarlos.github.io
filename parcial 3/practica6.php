@@ -33,7 +33,7 @@
                 echo " <img src='muerte.gif'> ";
 
                 echo "<h1>Juego terminado se agotaron las vidas!</h1>";
-                echo "<a href='practica6.html'>Regresar al inicio  <img src='muerte.gif'>  </a>";
+                echo "<a href='practica6.html'>Regresar al inicio O TE DESPIDO <img src='benson.JPG'>  </a>";
                 
                  return;
                 
