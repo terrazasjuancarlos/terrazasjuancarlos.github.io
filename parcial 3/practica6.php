@@ -68,7 +68,7 @@
                 <?php
                     $letras = str_split($palabra); //[0]='H', [1]='O', [2]='L', [3]='A';
                     for($i=0; $i<(count($letras)); $i++){
-                        echo "<input type='text' name='frase[]' style='width: 5%;' value='".$frase[$i]."'>";
+                        echo "<input type='text' name='frase[]' style='width: 15%;' value='".$frase[$i]."'>";
                     }
                 ?>
             </div>
