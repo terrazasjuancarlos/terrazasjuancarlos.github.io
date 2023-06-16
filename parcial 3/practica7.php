@@ -21,7 +21,7 @@
         .azul { background-color:  rgb(1,173,239); }
         .morado { background-color: rgb(131,78,160); }
         .naranja { background-color: orange ; }
-        .snake{ background-imag : url ('snake.jpg'); }
+        .snake{ background-image : url ('snake.jpg'); }
     </style>
 </head>
 <body>
@@ -37,8 +37,11 @@
                             $randomColor = $colors[array_rand($colors)];
                             echo "<div class='col-1'><div class='casilla $randomColor'>$i</div></div>";
 
-                            if($i==30) {
-                                echo "<img src='escalera de mano.Png' style='width: 8%;'>";
+                            if($i==30 || $i==10|| $i==50||  $i==45|| $i==65 || $i==80) {
+                                echo "<img src='escalera de mano.Png' style='width: 8%;'> ";
+                            }
+                            if($i==20 || $i==23|| $i==54||  $i==56|| $i==78 || $i==+68) {
+                                echo "<img src='snake.Png' style='width: 8%;'> ";
                             }
                         }
                         ?>
