@@ -42,9 +42,9 @@
 <body>
     <div class="container">
         <h1>Serpientes y Escaleras</h1>
-        <form action="practica7.php" method="post">
+        <form action="practica7-1.php" method="post">
             <hr>    
-            <input type="submit" value="jugar" class="btn btn-success"> , <button onclick="rollDice()">Lanzar Dado</button> 
+            <input type="submit" value="jugar" class="btn btn-success"> 
             <div id="dice"></div>
             <div id="player"></div>
             <hr>
@@ -79,10 +79,12 @@
                 ?>
             </div>
         </form>
+        <button onclick="rollDice()">Lanzar Dado</button> 
         
        
     </div>
     <script>
+        
         var currentPosition = 1; // Posición inicial del jugador
         var player = document.getElementById("player");
         player.classList.add("ficha");
