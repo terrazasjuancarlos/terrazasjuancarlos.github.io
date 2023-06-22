@@ -76,7 +76,11 @@
                         } else if($i == 17 || $i == 54 || $i == 58 || $i == 64 || $i == 87 || $i == 93 ||$i == 95 ||$i == 99 ||$i == 36){
                             echo "<div class='col-1 card m-1 casilla serpiente' style='background-color:".$colores[rand(0,4)].";'>".$i."</div>";
 
-                        } else {
+                        
+                        } else if($i == 0){
+                            echo "<div class='col-1 card m-1 casilla fichaR' style='background-color:".$colores[rand(0,4)].";'>".$i."</div>";
+
+                        }else {
                             echo "<div class='col-1 card m-1 casilla' style='background-color:".$colores[rand(0,4)].";'>".$i."</div>";
 
                         }
