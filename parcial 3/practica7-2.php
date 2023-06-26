@@ -4,76 +4,120 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Serpientes y Escaleras</title>
+    <title>Practica 7</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <style>
-        .casilla {
-            flex-grow: 1;
-            border: 1px solid #000;
-            text-align: center;
-            padding: 17px 0;
-            font-size: 20px;
-            font-weight: bold;
+        .casilla{
+            height: 50px;
         }
-        .rojo { background-color: red; }
-        .verde { background-color:   rgb(165,204,59); }
-        .azul { background-color:  rgb(1,173,239); }
-        .morado { background-color: rgb(131,78,160); }
+        .escalera{
+            background-image: url('escalera.png');
+            background-size: cover;
+        }
+        .serpiente{
+            background-image: url('serpiente1.png');
+            background-size: 90%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .ficha{
+            background-image: url("ficha.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
     </style>
 </head>
 <body>
+   
     <div class="container">
-        <h1>Serpientes y Escaleras</h1>
-        <form action="practica7-2.php" method="post">
-            <hr>    
-            <input type="submit" value="jugar" class="btn btn-success">
-            <button onclick="rollDice()">Lanzar Dado</button> 
+    <h1>Practica 7 - Tablero de serpiente y escaleras</h1><hr>
+        <form action="practica7-2.php" method= "post">
+            <input type="submit" value="jugar" class="btn btn-success" >
+        <div class="row">
+        <?php
+            $colores = ["#9B59B6", "#2ECC71", "#F1C40F", "#85C1E9 ", "#EC7063 "];
 
-            <hr>
-            <div class="row">
-                <?php
-                $colors = ['rojo', 'verde', 'azul', 'morado'];
-                
-                $Jugador = $_POST['Jugador'] ?? 0;
+            if(isset($_POST["casilla"])){
+                $dado= rand(1,12);
+                echo"<h2>Resultados del dado: ".$dado."</h2>";
+                $casilla=$dado+intval($_POST["casilla"]);
+                echo"<h3>El jugador estaba en la casilla ".intval($_POST["casilla"])." y paso a la casilla ".$casilla."</h3>";
+                //valida si gano el jugador
+                if($casilla >= 100){
+                    echo"<h1> El Jugador Ganó</h1>";
+                    $casilla = 100;
+                }
 
-                if (isset($_POST['Dado'])) {
-                    $Jugador += rand(1, 6);
-                    $Jugador = max(0, min(100, $Jugador));
+
+
+
+                //valida la escalera 
+                if($casilla == 80){
+                    $casilla = 91;
+                    echo "<h3> El jugador cayó en una escalera <img src='escalera.png' width='50px'> y subió a la casilla 91</h3>";
+                }
+                if($casilla == 22){
+                    $casilla = 33;
+                    echo "<h3> El jugador cayó en una escalera <img src='escalera.png' width='50px'> y subió a la casilla 33</h3>";
+                }
+                if($casilla == 64){
+                    $casilla = 75;
+                    echo "<h3> El jugador cayó en una escalera <img src='escalera.png' width='50px'> y subió a la casilla 75</h3>";
+                }
+                if($casilla == 45){
+                    $casilla = 56;
+                    echo "<h3> El jugador cayó en una escalera <img src='escalera.png' width='50px'> y subió a la casilla 56</h3>";
+                }
+                if($casilla == 13){
+                    $casilla = 24;
+                    echo "<h3> El jugador cayó en una escalera <img src='escalera.png' width='50px'> y subió a la casilla 24</h3>";
+                }
+                //serpientes
+                if($casilla == 17){
+                    $casilla = 28;
+                    echo "<h3> El jugador cayó en una serpiente <img src='serpiente.png' width='50px'> y bajó a la casilla 17</h3>";
+                }
+                if($casilla == 25){
+                    $casilla = 36;
+                    echo "<h3> El jugador cayó en una serpiente <img src='serpiente.png' width='50px'> y bajó a la casilla 25</h3>";
+                }
+                if($casilla == 40){
+                    $casilla = 51;
+                    echo "<h3> El jugador cayó en una serpiente <img src='serpiente.png' width='50px'> y bajó a la casilla 40</h3>";
+                }
+                if($casilla == 54){
+                    $casilla = 65;
+                    echo "<h3> El jugador cayó en una serpiente <img src='serpiente.png' width='50px'> y bajó a la casilla 54</h3>";
+                }
+                if($casilla == 88){
+                    $casilla = 99;
+                    echo "<h3> El jugador cayó en una serpiente <img src='serpiente.png' width='50px'> y bajó a la casilla 88</h3>";
+                }
+
+            }else{
+                $casilla = 0;
+            }
+        ?>
+        <?php
+            for($i=100; $i>0; $i--){
+                if($casilla == $i){
+                    echo "<div class='col-1 card m-1 casilla ficha' style='background-color:".$colores[rand(0,4)].";'>".$i."</div>";
+                }else if($i == 22 || $i == 13 || $i == 64 || $i == 80 || $i == 45 ){
+                    echo "<div class='col-1 card m-1 casilla escalera' style='background-color:".$colores[rand(0,4)].";'>".$i."</div>";
+                }else if($i == 28 || $i == 51 || $i == 36 || $i == 65 || $i == 99 ){
+                    echo "<div class='col-1 card m-1 casilla serpiente' style='background-color:".$colores[rand(0,4)].";'>".$i."</div>";
+                }else{
+                    echo "<div class='col-1 card m-1 casilla' style='background-color:".$colores[rand(0,4)].";'>".$i."</div>";
                 }
                 
-                for($i = 100; $i > 0; $i--) {
-                    $randomColor = $colors[array_rand($colors)];
-                    echo "<div class='col-1'><div class='casilla $randomColor'>$i";
-
-                    if ($i == 30 || $i == 10 || $i == 50 || $i == 45 || $i == 65 || $i == 80) {
-                        echo "<img src='escalera1.Png' style='width: 138%;'>";
-                    }
-                   
-                    if ($i == 74 || $i == 99 || $i == 54 || $i == 23 || $i == 78 || $i == 68) {
-                        echo "<img src='snake1.Png' style='width: 48%;'>";
-                    }
-
-                    if ( $i == 87 ||$i == 66) {
-                        echo "<img src='snake2.Png' style='width: 48%;'>";
-                        
-                    }
-                    
-                    if ($i == 62 || $i == 75 || $i == 42 || $i == 11 || $i == 56  ) {
-                        echo "<img src='snake3.Png' style='width: 48%;'>";
-                        
-                    }
-                    if ($i == 42 || $i == 22 || $i == 62 || $i == 57 || $i == 77 || $i == 92) {
-                        echo "<img src='escalera2.Png' style='width: 138%;'>";
-                    }
-                    
-                    
-                    
-                     echo "</div></div>"; 
-        
-                }
-                ?>
+              }
+        ?>
             </div>
-        </form>        
+            <input type="hidden" name="casilla" value="<?php echo $casilla;?>">
+        </form>
     </div>
 </body>
 </html>
